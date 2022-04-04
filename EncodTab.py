@@ -348,292 +348,292 @@ def decode(inputelement):
     elif ('00001101') == inputelement:
         return 'm'
     elif ('00001110') == inputelement:
-        return 'n''00001110'
+        return 'n'
     elif ('00001111') == inputelement:
-        return 'o''00001111'
+        return 'o'
     elif ('00010000') == inputelement:
-        return 'p''00010000'
+        return 'p'
     elif ('00010001') == inputelement:
-        return 'q''00010001'
+        return 'q'
     elif ('00010010') == inputelement:
-        return 'r''00010010'
+        return 'r'
     elif ('00010011') == inputelement:
-        return 's''00010011'
+        return 's'
     elif ('00010100') == inputelement:
-        return 't''00010100'
+        return 't'
     elif ('00010101') == inputelement:
-        return 'u''00010101'
+        return 'u'
     elif ('00010110') == inputelement:
-        return 'v''00010110'
+        return 'v'
     elif ('00010111') == inputelement:
-        return 'w''00010111'
+        return 'w'
     elif ('00011000') == inputelement:
-        return 'x''00011000'
+        return 'x'
     elif ('00011001') == inputelement:
-        return 'y''00011001'
+        return 'y'
     elif ('00011010') == inputelement:
-        return 'z''00011010'
+        return 'z'
     elif ('00011011') == inputelement:
-        return 'A''00011011'
+        return 'A'
     elif ('00011100') == inputelement:
-        return 'B''00011100'
+        return 'B'
     elif ('00011101') == inputelement:
-        return 'C''00011101'
+        return 'C'
     elif ('00011110') == inputelement:
-        return 'D''00011110'
+        return 'D'
     elif ('00011111') == inputelement:
-        return 'E''00011111'
+        return 'E'
     elif ('00100000') == inputelement:
-        return 'F''00100000'
+        return 'F'
     elif ('00100001') == inputelement:
-        return 'G''00100001'
+        return 'G'
     elif ('00100010') == inputelement:
-        return 'H''00100010'
+        return 'H'
     elif ('00100011') == inputelement:
-        return 'I''00100011'
+        return 'I'
     elif ('00100100') == inputelement:
-        return 'J''00100100'
+        return 'J'
     elif ('00100101') == inputelement:
-        return 'K''00100101'
+        return 'K'
     elif ('00100110') == inputelement:
-        return 'L''00100110'
+        return 'L'
     elif ('00100111') == inputelement:
-        return 'M''00100111'
+        return 'M'
     elif ('00101000') == inputelement:
-        return 'N''00101000'
+        return 'N'
     elif ('00101001') == inputelement:
-        return 'O''00101001'
+        return 'O'
     elif ('00101010') == inputelement:
-        return 'P''00101010'
+        return 'P'
     elif ('00101011') == inputelement:
-        return 'Q''00101011'
+        return 'Q'
     elif ('00101100') == inputelement:
-        return 'R''00101100'
+        return 'R'
     elif ('00101101') == inputelement:
-        return 'S''00101101'
+        return 'S'
     elif ('00101110') == inputelement:
-        return 'T''00101110'
+        return 'T'
     elif ('00101111') == inputelement:
-        return 'U''00101111'
+        return 'U'
     elif ('00110000') == inputelement:
-        return 'V''00110000'
+        return 'V'
     elif ('00110001') == inputelement:
-        return 'W''00110001'
+        return 'W'
     elif ('00110010') == inputelement:
-        return 'X''00110010'
+        return 'X'
     elif ('00110011') == inputelement:
-        return 'Y''00110011'
+        return 'Y'
     elif ('00110100') == inputelement:
-        return 'Z''00110100'
+        return 'Z'
     elif ('00110101') == inputelement:
-        return 'а''00110101'
+        return 'а'
     elif ('00110110') == inputelement:
-        return 'б''00110110'
+        return 'б'
     elif ('00110111') == inputelement:
-        return 'в''00110111'
+        return 'в'
     elif ('00111000') == inputelement:
-        return 'г''00111000'
+        return 'г'
     elif ('00111001') == inputelement:
-        return 'д''00111001'
+        return 'д'
     elif ('00111010') == inputelement:
-        return 'е''00111010'
+        return 'е'
     elif ('00111011') == inputelement:
-        return 'ё''00111011'
+        return 'ё'
     elif ('00111100') == inputelement:
-        return 'ж''00111100'
+        return 'ж'
     elif ('00111101') == inputelement:
-        return 'з''00111101'
+        return 'з'
     elif ('00111110') == inputelement:
-        return 'и''00111110'
+        return 'и'
     elif ('00111111') == inputelement:
-        return 'й''00111111'
+        return 'й'
     elif ('01000000') == inputelement:
-        return 'к''01000000'
+        return 'к'
     elif ('01000001') == inputelement:
-        return 'л''01000001'
+        return 'л'
     elif ('01000010') == inputelement:
-        return 'м''01000010'
+        return 'м'
     elif ('01000011') == inputelement:
-        return 'н''01000011'
+        return 'н'
     elif ('01000100') == inputelement:
-        return 'о''01000100'
+        return 'о'
     elif ('01000101') == inputelement:
-        return 'п''01000101'
+        return 'п'
     elif ('01000110') == inputelement:
-        return 'р''01000110'
+        return 'р'
     elif ('01000111') == inputelement:
-        return 'с''01000111'
+        return 'с'
     elif ('01001000') == inputelement:
-        return 'т''01001000'
+        return 'т'
     elif ('01001001') == inputelement:
-        return 'у''01001001'
+        return 'у'
     elif ('01001010') == inputelement:
-        return 'ф''01001010'
+        return 'ф'
     elif ('01001011') == inputelement:
-        return 'х''01001011'
+        return 'х'
     elif ('01001100') == inputelement:
-        return 'ц''01001100'
+        return 'ц'
     elif ('01001101') == inputelement:
-        return 'ч''01001101'
+        return 'ч'
     elif ('01001110') == inputelement:
-        return 'ш''01001110'
+        return 'ш'
     elif ('01001111') == inputelement:
-        return 'щ''01001111'
+        return 'щ'
     elif ('01010000') == inputelement:
-        return 'ъ''01010000'
+        return 'ъ'
     elif ('01010001') == inputelement:
-        return 'ы''01010001'
+        return 'ы'
     elif ('01010010') == inputelement:
-        return 'ь''01010010'
+        return 'ь'
     elif ('01010011') == inputelement:
-        return 'э''01010011'
+        return 'э'
     elif ('01010100') == inputelement:
-        return 'ю''01010100'
+        return 'ю'
     elif ('01010101') == inputelement:
-        return 'я''01010101'
+        return 'я'
     elif ('01010110') == inputelement:
-        return 'А''01010110'
+        return 'А'
     elif ('01010111') == inputelement:
-        return 'Б''01010111'
+        return 'Б'
     elif ('01011000') == inputelement:
-        return 'В''01011000'
+        return 'В'
     elif ('01011001') == inputelement:
-        return 'Г''01011001'
+        return 'Г'
     elif ('01011010') == inputelement:
-        return 'Д''01011010'
+        return 'Д'
     elif ('01011011') == inputelement:
-        return 'Е''01011011'
+        return 'Е'
     elif ('01011100') == inputelement:
-        return 'Ё''01011100'
+        return 'Ё'
     elif ('01011101') == inputelement:
-        return 'Ж''01011101'
+        return 'Ж'
     elif ('01011110') == inputelement:
-        return 'З''01011110'
+        return 'З'
     elif ('01011111') == inputelement:
-        return 'И''01011111'
+        return 'И'
     elif ('01100000') == inputelement:
-        return 'Й''01100000'
+        return 'Й'
     elif ('01100001') == inputelement:
-        return 'К''01100001'
+        return 'К'
     elif ('01100010') == inputelement:
-        return 'Л''01100010'
+        return 'Л'
     elif ('01100011') == inputelement:
-        return 'М''01100011'
+        return 'М'
     elif ('01100100') == inputelement:
-        return 'Н''01100100'
+        return 'Н'
     elif ('01100101') == inputelement:
-        return 'О''01100101'
+        return 'О'
     elif ('01100110') == inputelement:
-        return 'П''01100110'
+        return 'П'
     elif ('01100111') == inputelement:
-        return 'Р''01100111'
+        return 'Р'
     elif ('01101000') == inputelement:
-        return 'С''01101000'
+        return 'С'
     elif ('01101001') == inputelement:
-        return 'Т''01101001'
+        return 'Т'
     elif ('01101010') == inputelement:
-        return 'У''01101010'
+        return 'У'
     elif ('01101011') == inputelement:
-        return 'Ф''01101011'
+        return 'Ф'
     elif ('01101100') == inputelement:
-        return 'Х''01101100'
+        return 'Х'
     elif ('01101101') == inputelement:
-        return 'Ц''01101101'
+        return 'Ц'
     elif ('01101110') == inputelement:
-        return 'Ч''01101110'
+        return 'Ч'
     elif ('01101111') == inputelement:
-        return 'Ш''01101111'
+        return 'Ш'
     elif ('01110000') == inputelement:
-        return 'Щ''01110000'
+        return 'Щ'
     elif ('01110001') == inputelement:
-        return 'Ы''01110001'
+        return 'Ы'
     elif ('01110010') == inputelement:
-        return 'Э''01110010'
+        return 'Э'
     elif ('01110011') == inputelement:
-        return 'Ю''01110011'
+        return 'Ю'
     elif ('01110100') == inputelement:
-        return 'Я''01110100'
+        return 'Я'
     elif ('01110101') == inputelement:
-        return '1''01110101'
+        return '1'
     elif ('01110110') == inputelement:
-        return '2''01110110'
+        return '2'
     elif ('01110111') == inputelement:
-        return '3''01110111'
+        return '3'
     elif ('01111000') == inputelement:
-        return '4''01111000'
+        return '4'
     elif ('01111001') == inputelement:
-        return '5''01111001'
+        return '5'
     elif ('01111010') == inputelement:
-        return '6''01111010'
+        return '6'
     elif ('01111011') == inputelement:
-        return '7''01111011'
+        return '7'
     elif ('01111100') == inputelement:
-        return '8''01111100'
+        return '8'
     elif ('01111101') == inputelement:
-        return '9''01111101'
+        return '9'
     elif ('01111110') == inputelement:
-        return '0''01111110'
+        return '0'
     elif ('01111111') == inputelement:
-        return '`''01111111'
+        return '`'
     elif ('10000000') == inputelement:
-        return '~''10000000'
+        return '~'
     elif ('10000001') == inputelement:
-        return '!''10000001'
+        return '!'
     elif ('10000010') == inputelement:
-        return '@''10000010'
+        return '@'
     elif ('10000011') == inputelement:
-        return '#''10000011'
+        return '#'
     elif ('10000100') == inputelement:
-        return '$''10000100'
+        return '$'
     elif ('10000101') == inputelement:
-        return '%''10000101'
+        return '%'
     elif ('10000110') == inputelement:
-        return '^''10000110'
+        return '^'
     elif ('10000111') == inputelement:
-        return '&''10000111'
+        return '&'
     elif ('10001000') == inputelement:
-        return '*''10001000'
+        return '*'
     elif ('10001001') == inputelement:
-        return '(''10001001'
+        return '('
     elif ('10001010') == inputelement:
-        return ')''10001010'
+        return ')'
     elif ('10001011') == inputelement:
-        return '-''10001011'
+        return '-'
     elif ('10001100') == inputelement:
-        return '_''10001100'
+        return '_'
     elif ('10001101') == inputelement:
-        return '=''10001101'
+        return '='
     elif ('10001110') == inputelement:
-        return '+''10001110'
+        return '+'
     elif ('10001111') == inputelement:
-        return '[''10001111'
+        return '['
     elif ('10010000') == inputelement:
-        return ']''10010000'
+        return ']'
     elif ('10010001') == inputelement:
-        return '{''10010001'
+        return '{'
     elif ('10010010') == inputelement:
-        return '}''10010010'
+        return '}'
     elif ('10010011') == inputelement:
-        return '"''10010011'
+        return '"'
     elif ('10010100') == inputelement:
-        return ';''10010100'
+        return ';'
     elif ('10010101') == inputelement:
-        return ':''10010101'
+        return ':'
     elif ('10010110') == inputelement:
-        return "'"'10010110'
+        return "'"
     elif ('10010111') == inputelement:
-        return '/''10010111'
+        return '/'
     elif ('10011000') == inputelement:
-        return '?''10011000'
+        return '?'
     elif ('10011001') == inputelement:
-        return '.''10011001'
+        return '.'
     elif ('10011010') == inputelement:
-        return ',''10011010'
+        return ','
     elif ('10011011') == inputelement:
-        return '>''10011011'
+        return '>'
     elif ('10011100') == inputelement:
-        return '<''10011100'
+        return '<'
     elif ('10011101') == inputelement:
-        return '|''10011101'
+        return '|'
     elif ('10011110') == inputelement:
         return '№'
