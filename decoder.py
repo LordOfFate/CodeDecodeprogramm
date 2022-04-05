@@ -44,4 +44,4 @@ class list:
             curretIter = current.next_element
         current.oneAddElement = curretIter
         current.ZeroAdd = ZeroAddElement
-        current.OneAdd = OneAddElemnt
+        current.OneAdd = OneAddElement
