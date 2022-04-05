@@ -27,6 +27,9 @@
     <Compile Include="EncodTab.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="decoder.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="хостовертка.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
