@@ -3,26 +3,6 @@ import coder
 import decoder
 import EncodTab
 
-#Tab = decoder.GenerateDecoderTab()
-
-#decoder.GenerateNode(Tab, '000')
-#decoder.GenerateNode(Tab, '001')
-#decoder.GenerateNode(Tab, '010')
-#decoder.GenerateNode(Tab, '011')
-#decoder.GenerateNode(Tab, '100')
-#decoder.GenerateNode(Tab, '101')
-#decoder.GenerateNode(Tab, '110')
-#decoder.GenerateNode(Tab, '111')
-#decoder.GenerateChains(Tab, '000', '100', '000')
-#decoder.GenerateChains(Tab, '001', '100', '000')
-#decoder.GenerateChains(Tab, '010', '101', '001')
-#decoder.GenerateChains(Tab, '011', '101', '001')
-#decoder.GenerateChains(Tab, '100', '110', '010')
-#decoder.GenerateChains(Tab, '101', '110', '010')
-#decoder.GenerateChains(Tab, '110', '111', '011')
-#decoder.GenerateChains(Tab, '111', '111', '011')
-#decoder.OutAllTabElement(Tab)
-
 def convertation(inputData):
     firstRegester = False
     secondRegester = False
@@ -33,8 +13,6 @@ def convertation(inputData):
     Chank = ''
     ComtliteText = ''
     while i < len(inputData):
-
-        OneChaizSize = 0
 
         forthRegester = therdRegester
         therdRegester = secondRegester
@@ -48,6 +26,7 @@ def convertation(inputData):
 
         metka = coder.size_Out(sos)
         while j <= metka:
+            OneChaizSize = 0
             if coder.ask_element(sos, j, 1) == True:
                 if firstRegester == True:
                     OneChaizSize = OneChaizSize + 1
