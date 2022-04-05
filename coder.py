@@ -40,7 +40,7 @@ class list:
         print(current.element, current.first_bit, current.secnd_bit, current.third_bit, current.forth_bit)
 
     def ask_node(self, element, bit):
-        if self.head.element == element:
+        if self.head.element == element:             
              if bit == 1:
                  return self.head.first_bit
              elif bit == 2:
@@ -63,6 +63,8 @@ class list:
                  return current.third_bit
             elif bit == 4:
                  return current.forth_bit
+    def sizeOut(self):
+        return self.sithe
 
 def generate_list():
     return list()
@@ -74,3 +76,5 @@ def size(list):
     return list.sithe
 def out(list):
     list.all_out()
+def size_Out(list):
+    return list.sizeOut()

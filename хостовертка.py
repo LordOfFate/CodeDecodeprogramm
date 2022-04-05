@@ -1,20 +1,96 @@
 from tkinter import *
 import coder
+import decoder
 import EncodTab
 
-sus = 'AMOGUS'
-pir = ''
-i = 0
-while i < len(sus):
-    pir = pir + EncodTab.encode(sus[i])
-    i = i + 1
+#Tab = decoder.GenerateDecoderTab()
 
-print(pir)
+#decoder.GenerateNode(Tab, '000')
+#decoder.GenerateNode(Tab, '001')
+#decoder.GenerateNode(Tab, '010')
+#decoder.GenerateNode(Tab, '011')
+#decoder.GenerateNode(Tab, '100')
+#decoder.GenerateNode(Tab, '101')
+#decoder.GenerateNode(Tab, '110')
+#decoder.GenerateNode(Tab, '111')
+#decoder.GenerateChains(Tab, '000', '100', '000')
+#decoder.GenerateChains(Tab, '001', '100', '000')
+#decoder.GenerateChains(Tab, '010', '101', '001')
+#decoder.GenerateChains(Tab, '011', '101', '001')
+#decoder.GenerateChains(Tab, '100', '110', '010')
+#decoder.GenerateChains(Tab, '101', '110', '010')
+#decoder.GenerateChains(Tab, '110', '111', '011')
+#decoder.GenerateChains(Tab, '111', '111', '011')
+#decoder.OutAllTabElement(Tab)
+
+def convertation(inputData):
+    firstRegester = False
+    secondRegester = False
+    therdRegester = False
+    forthRegester = False
+
+    i = 0
+    Chank = ''
+    ComtliteText = ''
+    while i < len(inputData):
+
+        OneChaizSize = 0
+
+        forthRegester = therdRegester
+        therdRegester = secondRegester
+        secondRegester = firstRegester
+        if inputData[i] == '1':
+            firstRegester = True
+        else:
+            firstRegester = False
+
+        j = 1
+
+        metka = coder.size_Out(sos)
+        while j <= metka:
+            if coder.ask_element(sos, j, 1) == True:
+                if firstRegester == True:
+                    OneChaizSize = OneChaizSize + 1
+            if coder.ask_element(sos, j, 2) == True:
+                if secondRegester == True:
+                    OneChaizSize = OneChaizSize + 1
+            if coder.ask_element(sos, j, 3) == True:
+                if therdRegester == True:
+                    OneChaizSize = OneChaizSize + 1
+            if coder.ask_element(sos, j, 4) == True:
+                if forthRegester == True:
+                    OneChaizSize = OneChaizSize + 1
+            if OneChaizSize%2 == 0:
+                Chank = Chank + '0'
+            else:
+                Chank = Chank + '1'
+
+            j = j + 1
+        i = i + 1
+        
+        ComtliteText = ComtliteText + Chank
+        Chank = ''
+    print('После свертки:', ComtliteText)
+
+def Pressed():
+    i = 0
+
+    sus = txt.get()
+
+    pir = ''
+
+    while i < len(txt.get()):
+        pir = pir + EncodTab.encode(sus[i])
+        i = i + 1
+
+    print('До свертки: ', pir)
+    convertation(pir)
 
 sos = coder.generate_list()
 
 def AddButonPress():
     coder.add_element(sos, (coder.size(sos) + 1), first_bit.get(), second_bit.get(), third_bit.get(), forth_bit.get())
+    coder.out(sos)
 
 window = Tk()
 window.title("Решатель_кодовая версия")
@@ -56,7 +132,7 @@ txt = Entry(window,width=10)
 txt.grid(column=1, row=0) 
 
 #Кнопки
-butn = Button(window, text="Подтвердить")
+butn = Button(window, text="Подтвердить", command = Pressed)
 butn.grid(column=2, row=0)
 add_butn = Button(window, text="Добавить сумматор", command = AddButonPress)
 add_butn.grid(column=2, row=1)
