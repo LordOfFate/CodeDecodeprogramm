@@ -28,9 +28,9 @@ class DecodTab:
     def allOut(self):
         current = self.head
         while current.next_element != None:
-            print(current.element, ' |--> ', current.ZeroAdd.element, ' ', current.OneAdd.element)
+            print(current.element, ' |--> ', current.ZeroAdd.element, ': ', current.zeroAddElement, ' ', current.OneAdd.element, ': ', current.oneAddElement)
             current = current.next_element
-        print(current.element, ' |--> ', current.ZeroAdd.element, ' ', current.OneAdd.element)
+        print(current.element, ' |--> ', current.ZeroAdd.element, ': ', current.zeroAddElement, ' ', current.OneAdd.element, ': ', current.oneAddElement)
 
     def AskElement(self, element):
         current = self.head 
@@ -54,21 +54,3 @@ def ChainGenerate(List, element, ZeroChain, OneChain, ZeroElement = None, OneEle
 def OutAllTabElement(List):
     List.allOut()
 
-Tab = GenerateDecoderTab()
-GenerateNode(Tab, '000')
-GenerateNode(Tab, '001')
-GenerateNode(Tab, '010')
-GenerateNode(Tab, '011')
-GenerateNode(Tab, '100')
-GenerateNode(Tab, '101')
-GenerateNode(Tab, '110')
-GenerateNode(Tab, '111')
-ChainGenerate(Tab, '000', '000', '100')
-ChainGenerate(Tab, '001', '000', '100')
-ChainGenerate(Tab, '010', '001', '101')
-ChainGenerate(Tab, '011', '001', '101')
-ChainGenerate(Tab, '100', '010', '110')
-ChainGenerate(Tab, '101', '010', '110')
-ChainGenerate(Tab, '110', '011', '111')
-ChainGenerate(Tab, '111', '011', '111')
-OutAllTabElement(Tab)

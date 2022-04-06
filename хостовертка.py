@@ -3,6 +3,36 @@ import coder
 import decoder
 import EncodTab
 
+def AskForValue(firstRegester, secondRegester, therdRegester, forthRegester):
+
+    Chank = ''
+
+    j = 1
+    
+    metka = coder.size_Out(sos)
+    while j <= metka:
+        OneChaizSize = 0
+        if coder.ask_element(sos, j, 1) == True:
+            if firstRegester == True:
+                OneChaizSize = OneChaizSize + 1
+        if coder.ask_element(sos, j, 2) == True:
+            if secondRegester == True:
+                OneChaizSize = OneChaizSize + 1
+        if coder.ask_element(sos, j, 3) == True:
+            if therdRegester == True:
+                OneChaizSize = OneChaizSize + 1
+        if coder.ask_element(sos, j, 4) == True:
+            if forthRegester == True:
+                OneChaizSize = OneChaizSize + 1
+        if OneChaizSize%2 == 0:
+            Chank = Chank + '0'
+        else:
+            Chank = Chank + '1'
+
+        j = j + 1
+
+    return Chank
+
 def convertation(inputData):
     firstRegester = False
     secondRegester = False
@@ -64,6 +94,26 @@ def Pressed():
 
     print('До свертки: ', pir)
     convertation(pir)
+
+    Tab = decoder.GenerateDecoderTab()
+
+    decoder.GenerateNode(Tab, '000')
+    decoder.GenerateNode(Tab, '001')
+    decoder.GenerateNode(Tab, '010')
+    decoder.GenerateNode(Tab, '011')
+    decoder.GenerateNode(Tab, '100')
+    decoder.GenerateNode(Tab, '101')
+    decoder.GenerateNode(Tab, '110')
+    decoder.GenerateNode(Tab, '111')
+    decoder.ChainGenerate(Tab, '000', '000', '100', AskForValue(False, False, False, False), AskForValue(True, False, False, False))
+    decoder.ChainGenerate(Tab, '001', '000', '100', AskForValue(False, False, False, True), AskForValue(True, False, False, True))
+    decoder.ChainGenerate(Tab, '010', '001', '101', AskForValue(False, False, True, False), AskForValue(True, False, True, False))
+    decoder.ChainGenerate(Tab, '011', '001', '101', AskForValue(False, False, True, True), AskForValue(True, False, True, True))
+    decoder.ChainGenerate(Tab, '100', '010', '110', AskForValue(False, True, False, False), AskForValue(True, True, False, False))
+    decoder.ChainGenerate(Tab, '101', '010', '110', AskForValue(False, True, False, True), AskForValue(True, True, False, True))
+    decoder.ChainGenerate(Tab, '110', '011', '111', AskForValue(False, True, True, False), AskForValue(True, True, True, False))
+    decoder.ChainGenerate(Tab, '111', '011', '111', AskForValue(False, True, True, True), AskForValue(True, True, True, True))
+    decoder.OutAllTabElement(Tab)
 
 sos = coder.generate_list()
 
