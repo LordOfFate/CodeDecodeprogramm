@@ -45,6 +45,23 @@ class DecodTab:
         current.zeroAddElement = ZeroElement
         current.oneAddElement = OneElement
 
+    def INowTheWay(self, way):
+        current = self.head
+
+        MyWay = ''
+
+        i = 0
+
+        while i < len(way):
+            if way[i] == current.zeroAddElement:
+                MyWay = MyWay + '0'
+                current = current.ZeroAdd
+            if way[i] == current.oneAddElement:
+                MyWay = MyWay + '1'
+                current = current.OneAdd
+            i = i + 1
+        return MyWay
+
 def GenerateDecoderTab():
     return DecodTab()
 def GenerateNode(List, element):
@@ -53,4 +70,6 @@ def ChainGenerate(List, element, ZeroChain, OneChain, ZeroElement = None, OneEle
      List.MakeChaine(element, ZeroChain, OneChain, ZeroElement, OneElement)
 def OutAllTabElement(List):
     List.allOut()
+def OutTheTrueWay(List, way):
+    return List.INowTheWay(way)
 

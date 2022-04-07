@@ -3,6 +3,37 @@ import coder
 import decoder
 import EncodTab
 
+def DecodIt():
+    Tab = decoder.GenerateDecoderTab()
+
+    decoder.GenerateNode(Tab, '000')
+    decoder.GenerateNode(Tab, '001')
+    decoder.GenerateNode(Tab, '010')
+    decoder.GenerateNode(Tab, '011')
+    decoder.GenerateNode(Tab, '100')
+    decoder.GenerateNode(Tab, '101')
+    decoder.GenerateNode(Tab, '110')
+    decoder.GenerateNode(Tab, '111')
+    decoder.ChainGenerate(Tab, '000', '000', '100', AskForValue(False, False, False, False), AskForValue(True, False, False, False))
+    decoder.ChainGenerate(Tab, '001', '000', '100', AskForValue(False, False, False, True), AskForValue(True, False, False, True))
+    decoder.ChainGenerate(Tab, '010', '001', '101', AskForValue(False, False, True, False), AskForValue(True, False, True, False))
+    decoder.ChainGenerate(Tab, '011', '001', '101', AskForValue(False, False, True, True), AskForValue(True, False, True, True))
+    decoder.ChainGenerate(Tab, '100', '010', '110', AskForValue(False, True, False, False), AskForValue(True, True, False, False))
+    decoder.ChainGenerate(Tab, '101', '010', '110', AskForValue(False, True, False, True), AskForValue(True, True, False, True))
+    decoder.ChainGenerate(Tab, '110', '011', '111', AskForValue(False, True, True, False), AskForValue(True, True, True, False))
+    decoder.ChainGenerate(Tab, '111', '011', '111', AskForValue(False, True, True, True), AskForValue(True, True, True, True))
+    decoder.OutAllTabElement(Tab)
+
+    InputData = DecodInputTxt.get()
+    StepSize = coder.size_Out(sos)
+    TheWay = []
+
+    i = 0
+    while i < len(InputData):
+        TheWay.append(InputData[i:i+StepSize])
+        i = i + StepSize
+    print(decoder.OutTheTrueWay(Tab, TheWay))
+
 def AskForValue(firstRegester, secondRegester, therdRegester, forthRegester):
 
     Chank = ''
@@ -79,6 +110,7 @@ def convertation(inputData):
         
         ComtliteText = ComtliteText + Chank
         Chank = ''
+    OutLbl.configure(text = ComtliteText)
     print('После свертки:', ComtliteText)
 
 def Pressed():
@@ -95,26 +127,6 @@ def Pressed():
     print('До свертки: ', pir)
     convertation(pir)
 
-    Tab = decoder.GenerateDecoderTab()
-
-    decoder.GenerateNode(Tab, '000')
-    decoder.GenerateNode(Tab, '001')
-    decoder.GenerateNode(Tab, '010')
-    decoder.GenerateNode(Tab, '011')
-    decoder.GenerateNode(Tab, '100')
-    decoder.GenerateNode(Tab, '101')
-    decoder.GenerateNode(Tab, '110')
-    decoder.GenerateNode(Tab, '111')
-    decoder.ChainGenerate(Tab, '000', '000', '100', AskForValue(False, False, False, False), AskForValue(True, False, False, False))
-    decoder.ChainGenerate(Tab, '001', '000', '100', AskForValue(False, False, False, True), AskForValue(True, False, False, True))
-    decoder.ChainGenerate(Tab, '010', '001', '101', AskForValue(False, False, True, False), AskForValue(True, False, True, False))
-    decoder.ChainGenerate(Tab, '011', '001', '101', AskForValue(False, False, True, True), AskForValue(True, False, True, True))
-    decoder.ChainGenerate(Tab, '100', '010', '110', AskForValue(False, True, False, False), AskForValue(True, True, False, False))
-    decoder.ChainGenerate(Tab, '101', '010', '110', AskForValue(False, True, False, True), AskForValue(True, True, False, True))
-    decoder.ChainGenerate(Tab, '110', '011', '111', AskForValue(False, True, True, False), AskForValue(True, True, True, False))
-    decoder.ChainGenerate(Tab, '111', '011', '111', AskForValue(False, True, True, True), AskForValue(True, True, True, True))
-    decoder.OutAllTabElement(Tab)
-
 sos = coder.generate_list()
 
 def AddButonPress():
@@ -128,7 +140,7 @@ window.geometry('400x250')
 #Подписи
 textlb = Label(window, text="Введите кодируемый текст:")
 textlb.grid(column=0, row=0)
-addButtonLbl = Label(window, text="сумматор 1")
+addButtonLbl = Label(window, text="Добавить сумматор")
 addButtonLbl.grid(column=0, row=1)
 first_bitlb = Label(window, text="Первый бит:")
 first_bitlb.grid(column=0, row=2)
@@ -138,6 +150,13 @@ third_bitlb = Label(window, text="Третий бит:")
 third_bitlb.grid(column=0, row=4)
 forth_bitlb = Label(window, text="Четвертый бит:")
 forth_bitlb.grid(column=0, row=5)
+OutLblLbl = Label(window, text="Свёрнутый код:")
+OutLblLbl.grid(column=0, row=6)
+OutLbl = Label(window)
+OutLbl.grid(column=1, row=6)
+InputDecodDataLbl = Label(window, text="Введите декодируемыйтекст:")
+InputDecodDataLbl.grid(column=0, row=7)
+
 
 #Ввод дфнных
 #Флажки
@@ -159,11 +178,15 @@ forth_bit_box.grid(column=1, row=5)
 #Ввод текстовых данных
 txt = Entry(window,width=10)  
 txt.grid(column=1, row=0) 
+DecodInputTxt = Entry(window,width=10) 
+DecodInputTxt.grid(column=1, row=7)
 
 #Кнопки
 butn = Button(window, text="Подтвердить", command = Pressed)
 butn.grid(column=2, row=0)
 add_butn = Button(window, text="Добавить сумматор", command = AddButonPress)
 add_butn.grid(column=2, row=1)
+DecodeBtn = Button(window, text="Декодировать", command = DecodIt)
+DecodeBtn.grid(column=2, row=7)
 
 window.mainloop()
