@@ -32,7 +32,21 @@ def DecodIt():
     while i < len(InputData):
         TheWay.append(InputData[i:i+StepSize])
         i = i + StepSize
-    print(decoder.OutTheTrueWay(Tab, TheWay))
+
+    CompliteText = decoder.OutTheTrueWay(Tab, TheWay)
+
+    print(CompliteText)
+
+    i = 0
+    Plus = ''
+    ComplitOutputMesseg = ''
+
+    while i < len(CompliteText):
+        Plus = EncodTab.decode(CompliteText[i:i + 8])
+        ComplitOutputMesseg = ComplitOutputMesseg + Plus
+        i = i + 8
+
+    OutputDecodDataLbl.configure(text = ComplitOutputMesseg)
 
 def AskForValue(firstRegester, secondRegester, therdRegester, forthRegester):
 
@@ -111,6 +125,7 @@ def convertation(inputData):
         ComtliteText = ComtliteText + Chank
         Chank = ''
     OutLbl.configure(text = ComtliteText)
+
     print('После свертки:', ComtliteText)
 
 def Pressed():
@@ -156,9 +171,12 @@ OutLbl = Label(window)
 OutLbl.grid(column=1, row=6)
 InputDecodDataLbl = Label(window, text="Введите декодируемыйтекст:")
 InputDecodDataLbl.grid(column=0, row=7)
+OutputDecodDataLblLbl = Label(window, text="Декодированный текст:")
+OutputDecodDataLblLbl.grid(column=0, row=8)
+OutputDecodDataLbl = Label(window)
+OutputDecodDataLbl.grid(column=1, row=8)
 
-
-#Ввод дфнных
+#Ввод данных
 #Флажки
 first_bit = BooleanVar()
 second_bit = BooleanVar()
